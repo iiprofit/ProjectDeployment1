@@ -35,9 +35,17 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Registrations" asp-action="RegisterUser">Resume</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="Registrations" asp-action="RegisterUser"><i class="fa fa-book mr-1" aria-hidden="true"></i>Register</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-decoration-none text-white" href="#" id="navbardrop" data-toggle="dropdown">
+                                Registration
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="nav-link" style="color:black" asp-area="" asp-controller="Registrations" asp-action="RegisterUser">User Registration</a>
+                                <a class="nav-link" style="color:black" asp-area="" asp-controller="Registrations" asp-action="Index">Registration Information</a>
+      
+                            </div>
                         </li>
+                       
                         <li class="nav-item">
                             <a class="nav-link text-white" asp-area="" asp-controller="Registrations" asp-action="RegisterUser"><i class="fa fa-sign-in mr-1" aria-hidden="true"></i>Login</a>
                         </li>

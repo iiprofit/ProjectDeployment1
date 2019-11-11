@@ -13,6 +13,6 @@ namespace ProjectDeployment1.Models
         {
 
         }
-        public DbSet<ProjectDeployment1.Models.Registration> Registration { get; set; }
+        public DbSet<Registration> Registration { get; set; }
     }
 }

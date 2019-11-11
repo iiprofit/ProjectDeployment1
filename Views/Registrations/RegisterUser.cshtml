@@ -24,23 +24,22 @@
                 </div>
             </div>
             <div class="form-group">
-                <label asp-for="UserType" class="control-label"></label>
-                <input asp-for="UserType" class="form-control" />
-                <span asp-validation-for="UserType" class="text-danger"></span>
+                <label for="sel1">Users Type</label>
+                <select asp-for="UserType" class="form-control" id="sel1">
+                    <option selected>Select User Type</option>
+                    <option>Agency</option>
+                    <option>Employeer</option>
+                    <option>User</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="UserPassword" class="control-label"></label>
                 <input asp-for="UserPassword" class="form-control" />
                 <span asp-validation-for="UserPassword" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="UserConfPassword" class="control-label"></label>
-                <input asp-for="UserConfPassword" class="form-control" />
-                <span asp-validation-for="UserConfPassword" class="text-danger"></span>
-            </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <input type="submit" value="Create" class="btn btn-success btn-block" />
+                    <input type="submit" value="Register" class="btn btn-success btn-block" />
                 </div>
                 <div class=" form-group col-md-6">
                     <a asp-action="Index" class="btn btn-dark btn-block">Back</a>
@@ -50,7 +49,9 @@
     </div>
     <div class="col-md-6">
         <div class="row">
-
+            <div class="col-md-6">
+                <a href="#"><img src="~/image/google1.png" class="ml-auto" alt="Google Login" /></a>
+            </div>
         </div>
     </div>
 </div>

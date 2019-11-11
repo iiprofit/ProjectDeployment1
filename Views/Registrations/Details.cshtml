@@ -4,39 +4,32 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Registration</h4>
+    <h3> @Html.DisplayFor(model => model.UserFullName)</h3>
     <hr />
+<div>
+    
     <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserFullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserFullName)
-        </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2 border">
             @Html.DisplayNameFor(model => model.UserEmailId)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-3">
             @Html.DisplayFor(model => model.UserEmailId)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class = "col-sm-2 border">
             @Html.DisplayNameFor(model => model.UserType)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-sm-3 ">
             @Html.DisplayFor(model => model.UserType)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.UserPassword)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.UserPassword)
         </dd>
     </dl>
 </div>
+<hr />
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.RegistrationId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <div class="row">
+        <div class="col-md-1">
+            <a asp-action="Index" class="btn btn-dark btn-block">Back</a>
+        </div>
+    </div>
+     
+    
 </div>

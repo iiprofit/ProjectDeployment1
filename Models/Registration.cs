@@ -19,7 +19,7 @@ namespace ProjectDeployment1.Models
         [DisplayName("Full Name")]
         public string UserFullName { get; set; }
         
-        [Column(TypeName = "nvarchar(10)")]
+        [Column(TypeName = "nvarchar(100)")]
         [Required(ErrorMessage = "Blank field is not allow")]
         [DisplayName("Email Address")]
         public string UserEmailId { get; set; }
@@ -35,13 +35,12 @@ namespace ProjectDeployment1.Models
         public string UserPassword { get; set; }
 
 
-        [NotMapped]
-        [Column(TypeName = "nvarchar(100)")]
-        [DisplayName("Confirm Password")]
-        [DataType(DataType.Password)]
-        [Required(ErrorMessage = "Blank field is not allow")]
-        [Compare("UserPassword",ErrorMessage ="Password does not match")]
-        public string UserConfPassword { get; set; }
+        //[NotMapped]
+        //[Column(TypeName = "nvarchar(100)")]
+        //[DisplayName("Confirm Password")]
+        //[DataType(DataType.Password)]
+        //[Compare("UserPassword",ErrorMessage ="Password does not match")]
+        //public string UserConfPassword { get; set; }
     }
 
 
