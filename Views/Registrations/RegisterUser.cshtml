@@ -1,0 +1,61 @@
+﻿@model ProjectDeployment1.Models.Registration
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 class="text-center">User Registration</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-6" style="border-right: 1px solid lightgray">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-row">
+                <div class="form-group col-md">
+                    <label asp-for="UserFullName" class="control-label"></label>
+                    <input asp-for="UserFullName" class="form-control" />
+                    <span asp-validation-for="UserFullName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md">
+                    <label asp-for="UserEmailId" class="control-label"></label>
+                    <input asp-for="UserEmailId" class="form-control" />
+                    <span asp-validation-for="UserEmailId" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserType" class="control-label"></label>
+                <input asp-for="UserType" class="form-control" />
+                <span asp-validation-for="UserType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserPassword" class="control-label"></label>
+                <input asp-for="UserPassword" class="form-control" />
+                <span asp-validation-for="UserPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UserConfPassword" class="control-label"></label>
+                <input asp-for="UserConfPassword" class="form-control" />
+                <span asp-validation-for="UserConfPassword" class="text-danger"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="submit" value="Create" class="btn btn-success btn-block" />
+                </div>
+                <div class=" form-group col-md-6">
+                    <a asp-action="Index" class="btn btn-dark btn-block">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
